@@ -1,10 +1,10 @@
 pipeline {
   agent any
-  stages {
-    stage('Checkout') {
-      steps {
-        sh 'build'
-      }
+  checkout scm
+stage "Build Pex"
+dir ('your new directory') { 
+    sh('build.sh')
+}
     }
     stage('Build') {
       steps {
